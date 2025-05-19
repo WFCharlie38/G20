@@ -7,7 +7,7 @@ public class Pan extends Producto
     
     /**********************************************************************************/
 
-    public Pan(int precio, String nombre, String harina) {
+    public Pan(double precio, String nombre, String harina) {
         super(precio, nombre);
         this.harina = harina;
     }
