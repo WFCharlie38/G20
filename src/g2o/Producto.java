@@ -11,10 +11,20 @@ public class Producto
     
     /**********************************************************************************/
 
-    public Producto(int codigo, int precio, String nombre) {
+    public Producto(int precio, String nombre) {
         this.codigo = codigoTotal++;
         this.precio = precio;
         this.nombre = nombre;
+    }
+    
+    /**********************************************************************************/
+    
+    public int getPrecio() {
+        return precio;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
     
 }

@@ -8,8 +8,8 @@ public class Bolleria extends Producto
 
     /**********************************************************************************/
     
-    public Bolleria(int azucar, boolean descuento, int codigo, int precio, String nombre) {
-        super(codigo, precio, nombre);
+    public Bolleria(int precio, String nombre, int azucar, boolean descuento) {
+        super(precio, nombre);
         this.azucar = azucar;
         this.descuento = descuento;
     }
