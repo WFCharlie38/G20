@@ -4,7 +4,7 @@ package g2o;
 public class Producto 
 {
     private int codigo;
-    private static int codigoTotal=9;
+    private static int codigoTotal=10;
     private double precio;
     private String nombre;
     private static int total=0;
@@ -16,7 +16,6 @@ public class Producto
         this.precio = precio;
         this.nombre = nombre;
         total++;
-        calcularDescuento();
     }
     
     /**********************************************************************************/
@@ -48,12 +47,6 @@ public class Producto
 
     public void setPrecio(double precio) {
         this.precio = precio;
-    }
-    
-    /**********************************************************************************/
-    
-    public void calcularDescuento() {
-        this.calcularDescuento();
     }
     
     /**********************************************************************************/

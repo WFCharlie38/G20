@@ -17,6 +17,7 @@ public class Bolleria extends Producto
         super(precio, nombre);
         this.azucar = azucar;
         this.descuento = descuento;
+        comprobarDescuento();
     }
     
     /**********************************************************************************/
@@ -28,13 +29,11 @@ public class Bolleria extends Producto
     /**********************************************************************************/
     
     public void comprobarDescuento() {
-        double nuevoPrecio;
-        double precio=this.getPrecio();
         if (descuento) {
-            nuevoPrecio=precio-(precio*0.15);
-            this.setPrecio(precio);
+            double precio = getPrecio();
+            double nuevoPrecio = precio - (precio * 0.15);
+            setPrecio(nuevoPrecio);
         }
     }
-
     
 }

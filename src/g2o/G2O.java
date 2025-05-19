@@ -47,25 +47,35 @@ public class G2O
         producto = new Bolleria(1.5, "bollycao", 0, true);
         almacen.agregarProducto(producto);
         
+        System.out.println("");
+        
         almacen.calcularPrecioTotal();
         
-        System.out.println("Inroduce el nombre del producto que quieres caluclar el total: ");
+        System.out.println("");
+        
+        System.out.print("Inroduce el nombre del producto que quieres caluclar el total: ");
         nombre = entrada.nextLine();
         
         almacen.caluclarPrecioProducto(nombre);
         
-        System.out.println("Inroduce el numero de la estanteria que quieres calcular el total: ");
+        System.out.println("");
+        
+        System.out.print("Inroduce el numero de la estanteria que quieres calcular el total: ");
         estanteria = entrada.nextInt();
         
         almacen.calcularPrecioTotalEstanteria(estanteria);
         
-        System.out.println("Inroduce el codigo del producto que quieres eliminar: ");
+        System.out.println("");
+        
+        System.out.print("Inroduce el codigo del producto que quieres eliminar: ");
         codigo = entrada.nextInt();
         
         almacen.eliminarProducto(codigo);
         
         producto = new Bolleria(3.75, "croissants", 0);
         almacen.agregarProducto(producto);
+        
+        System.out.println("");
         
         almacen.mostrarInformacion();
         

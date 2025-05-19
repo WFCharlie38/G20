@@ -18,20 +18,28 @@ public class Almacen
     /**********************************************************************************/
     
     public void agregarProducto(Producto producto) {
-        for (int j = 0; j < almacen.length; j++) {
-            for (int i = 0; i < almacen[1].length; i++) {
-                if (almacen[i][j] != null) {
+        int i=0;
+        int j=0;
+        boolean puesto=false;
+        
+        while (j < almacen[1].length && !puesto) {
+            while (i < almacen.length && !puesto) {
+                if (almacen[i][j] == null) {
                     almacen[i][j] = producto;
+                    puesto = true;
                     System.out.println("Producto insertado: "+producto.getNombre()+" En la estantería "+(j)+" y fila "+(i)+" precio: "+producto.getPrecio()+" código: "+producto.getCodigo());
                 }
+                i++;
             }
+            j++;
+            i=0;
         }
     }
     
     /**********************************************************************************/
     
     public void calcularPrecioTotal() {
-        int precio=0;
+        double precio=0;
         
         for (int i = 0; i < almacen.length; i++) {
             for (int j = 0; j < almacen[1].length; j++) {
@@ -47,7 +55,7 @@ public class Almacen
     /**********************************************************************************/
     
     public void caluclarPrecioProducto(String nombre) {
-        int precio=0;
+        double precio=0;
         
         for (int i = 0; i < almacen.length; i++) {
             for (int j = 0; j < almacen[1].length; j++) {
@@ -63,7 +71,7 @@ public class Almacen
     /**********************************************************************************/
     
     public void calcularPrecioTotalEstanteria(int estanteria) {
-        int precio=0;
+        double precio=0;
         
          for (int i = 0; i < almacen[1].length; i++) {
              if (almacen[i][estanteria] != null) {
