@@ -22,6 +22,7 @@ public class Almacen
             for (int i = 0; i < almacen[1].length; i++) {
                 if (almacen[i][j] != null) {
                     almacen[i][j] = producto;
+                    System.out.println("Producto insertado: "+producto.getNombre()+" En la estantería "+(j)+" y fila "+(i)+" precio: "+producto.getPrecio()+" código: "+producto.getCodigo());
                 }
             }
         }

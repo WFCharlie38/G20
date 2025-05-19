@@ -16,6 +16,7 @@ public class Producto
         this.precio = precio;
         this.nombre = nombre;
         total++;
+        calcularDescuento();
     }
     
     /**********************************************************************************/
@@ -47,6 +48,12 @@ public class Producto
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+    
+    /**********************************************************************************/
+    
+    public void calcularDescuento() {
+        this.calcularDescuento();
     }
     
     /**********************************************************************************/
